@@ -30,13 +30,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/screenshot.JPG)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here]
-- Live Site URL: [Add live site URL here]
+- Solution URL: [https://gif-searcher-theodinproject.netlify.app/]
+- Live Site URL: [https://github.com/TheLegend760/GIF-Search-TheOdinProject]
 
 ## My process
 

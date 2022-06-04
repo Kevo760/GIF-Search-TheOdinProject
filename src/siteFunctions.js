@@ -1,5 +1,4 @@
 import noImg from './images/no-img.jpg';
-import loadingImg from './images/loading.gif';
 
 function siteBtnFunctions() {
     const gif = document.querySelector('#gif');
