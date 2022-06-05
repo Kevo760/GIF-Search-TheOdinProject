@@ -11,32 +11,34 @@ function siteBtnFunctions() {
     gifForm.addEventListener('submit', function(e) {
         e.preventDefault();
     
-       
         search = searchGif.value;
-        fetch(`https://api.giphy.com/v1/gifs/translate?api_key=LvORzdnADWvyluc0ptHK08Zu3ijRFDaR&s=${search}`, {mode: 'cors'})
-        .then(function(response) {
-            return response.json();
-          })
-          .then(function(response) {
-            gif.src = response.data.images.original.url;
-          })
-          .catch(function() {
-            gif.src= noImg;
-          });
+
+        try {
+          getGIF();
+        } catch (error) {
+          gif.src= noImg;
+        }
     });
     
     
     const nextBtn = document.querySelector('#next-btn');
     nextBtn.addEventListener('click', function() {
-        fetch(`https://api.giphy.com/v1/gifs/translate?api_key=LvORzdnADWvyluc0ptHK08Zu3ijRFDaR&s=${search}`, {mode: 'cors'})
-        .then(function(response) {
-            return response.json();
-          })
-          .then(function(response) {
-            gif.src = response.data.images.original.url;
-          })
-    });
-
+      try {
+        getGIF();
+      } catch (error) {
+        gif.src= noImg;
+      }
+})
 };
+
+
+
+
+async function getGIF() {
+  const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=LvORzdnADWvyluc0ptHK08Zu3ijRFDaR&s=${search}`, {mode: 'cors'});
+  const getGIF = await response.json();
+  gif.src = getGIF.data.images.original.url;
+}
+
 
 export {siteBtnFunctions}
