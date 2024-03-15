@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://gif-searcher-theodinproject.netlify.app/]
-- Live Site URL: [https://github.com/TheLegend760/GIF-Search-TheOdinProject]
+- Solution URL: [https://github.com/Kevo760/GIF-Search-TheOdinProject]
+- Live Site URL: [https://gif-searcher-theodinproject.netlify.app/]
 
 ## My process
 
